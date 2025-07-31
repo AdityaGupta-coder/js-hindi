@@ -1,0 +1,16 @@
+let myd = new Date()
+// console.log(myd.toString())
+// console.log(myd.toDateString())
+// console.log(myd.toLocaleString())
+// let myCreatedD= new Date(2025,7,1)
+let myCreatedD= new Date("08-01-2025")
+// console.log(myCreatedD.toDateString());
+// let mytimeStamp = Date.now()
+// console.log(mytimeStamp);
+//  console.log(mytimeStamp.toPrecision());
+// console.log(Math.floor(Date.now()/ 1000));
+let newdate = new Date(2025,7,1)
+newdate.toLocaleString('default',{
+    weekday:"long"
+})
+console.log(newdate);
