@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-       body {
+       .form {
   background: #212121;
-  margin: 0;
-  height: 100vh;
+  gap: 2%;
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,20 +23,21 @@
 </head>
 <body>
     <div id="wrapper">
+        
         <h1> Number guessing game</h1>
         <p>Try and guess a random number between 1 and 100.</p>
         <p>You have 10 attempts to guess the right number.</p>
         <br>
         <form class="form">
-            <label for="guessField" id="guess">Guess a number</label>
-            <input type="text" id="guessFeild" class="guessFeild">
-            <input type="submit" id= "subt" value="Submit guess" class="guessSubmit">
+            <label for="guessField" id="guess"> <h2> <b>Guess a random  number</b> </h2>   </label>
+            <input type="text" id="guessField" class="guessField" style="height: 7%; width: 10%;"> 
+            <input type="submit" id= "subt" value="Submit guess" class="guessSubmit" style="height: 10%; width: 10%;">
         </form>
         <div class="resultParas">
-            <input type="text" id="guessField" class="guessField">
-<p> Guesses Remaining: <span class="lastResult">10</span></p>
-
-        <p class="lowOrHi"></p>
+           
+            <p> Previous Guesses: <span class="guesses"></span></p>
+            <p> Guesses Remaining: <span class="lastResult">10</span></p>
+            <p class="lowOrHi"></p>
         </div>
     </div>
     <script src="04_project.js"></script>
