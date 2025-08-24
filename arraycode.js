@@ -6,15 +6,15 @@ myHeroes.pop()
 console.log((myHeroes))
 myHeroes.pop()
 console.log((myHeroes))
-arr.unshift(8) add element in front of array
-arr.shift() shift one element from start
+arr.unshift(8)// add element in front of array
+arr.shift() //shift one element from start
 console.log("original array type ->>",typeof(arr))
 const newArr= arr.join()
 console.log("After join change type of array  ->>",typeof(newArr))
 
-->>> slice (does not affect the original array and less than range ) 
+// ->>> slice (does not affect the original array and less than range ) 
 
-->>>  splice (affect the original array upto range )
+// ->>>  splice (affect the original array upto range )
 
 const myarr = [1,2,3,4,5,6,7];
 
@@ -32,8 +32,8 @@ console.log( "this is after splice of original arr ", myarr)
 
 console.log( "this splice->>", myn2)
 
-for concat of two or more array  use this --->>>
-const myHeroes = ['Aditya', 'saktiman', 'father', 'mother'];
+//for concat of two or more array  use this --->>>
+const myHeroes2 = ['Aditya', 'saktiman', 'father', 'mother'];
 const name_array = ['aditya', 'ganga','suraj','mittal','asha']
 
 const add_two_arr= [...myHeroes , ...name_array]
