@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #f1f1f1;">
+    <h1>Hello!</h1>
+</body>
+<script>
+    const RequestUrl = 'https://github.com/AdityaGupta-coder/js-hindi'
+    const xhr = new XMLHttpRequest();
+    xhr.open( 'GET' ,RequestUrl )
+  xhr.onreadystatechange = function() { 
+    console.log( "Aditya ")
+if( xhr.readyState === 3){
+    const data = JSON.parse( this.responseText)
+    console.log( data);
+  //  console.log( data.followers);
+}
+    }
+    xhr.send();
+</script>
+</html>
+// ++++++++++++++++++ // 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Weather App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    #weather {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      color: darkblue;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 8px;
+      border: none;
+      background-color: royalblue;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌍 Mini Weather App</h1>
+  <p>Click the button to get current weather in London</p>
+  <button onclick="getWeather()">Get Weather</button>
+
+  <div id="weather"></div>
+
+  <script>
+    async function getWeather() {
+      try {
+        // Fetch data from Open-Meteo API
+        let response = await fetch("https://api.open-meteo.com/v1/forecast?latitude=20.2961&longitude=85.8245&current_weather=true");
+        let data = await response.json();
+
+        // Extract temperature
+        let temp = data.current_weather.temperature;
+
+        // Show it on page
+        document.getElementById("weather").innerText = "🌡️ Temperature in bhubaneswar: " + temp + " °C";
+      } catch (error) {
+        document.getElementById("weather").innerText = "Error fetching weather ❌";
+        console.error(error);
+      }
+    }
+  </script>
+
+</body>
+</html>
